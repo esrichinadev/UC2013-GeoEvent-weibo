@@ -1,0 +1,230 @@
+<!-- saved from url=(0063)http://arcgis.github.io/social-js/templates/StreamCreation.html -->
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+    <body>
+        <div data-dojo-attach-point="creationDijit">
+      <div id="creation-col-left">
+        <div id="creation-step-1" class="creation-step step-selected">
+          <div class="inner">
+            <span class="creation-step-num">1</span>
+            <span>新建数据流</span>
+          </div>
+        </div>
+        <div id="creation-step-2" class="creation-step">
+          <div class="inner">
+            <span class="creation-step-num">2</span>
+            <span>分析</span>
+          </div>
+        </div>
+        <div id="creation-step-3" class="creation-step">
+          <div class="inner">
+            <span class="creation-step-num">3</span>
+            <span>可视化</span>
+          </div>
+        </div>
+        <div id="creation-step-4" class="creation-step">
+          <div class="inner">
+            <span class="creation-step-num">4</span>
+            <span>过滤</span>
+          </div>
+        </div>
+      </div>
+  <div id="creation-col-right">
+    <div id="creation-new-stream" class="creation-step-content">
+      <div class="creation-light creation-wrapper">
+        <span class="creation-header">采集源</span>
+        <ul class="nav nav-list">
+          <li class="source selected active" title="新浪微博"><a href="#" id="twitter"><span class=""></span>新浪微博</a></li>
+          <li class="source" title="wikipedia"><a style="display:none" href="http://arcgis.github.io/social-js/templates/StreamCreation.html#" id="wikipedia"><span></span>Wikipedia</a></li>
+          <li class="source" title="instagram" style="pointer-events: none;"><a style="display:none" href="http://arcgis.github.io/social-js/templates/StreamCreation.html#"><span></span>Instagram</a></li>
+          <li class="source" title="flickr" style="pointer-events: none;"><a style="display:none" href="http://arcgis.github.io/social-js/templates/StreamCreation.html#"><span></span>Flickr</a></li>
+        </ul>
+        <div id="creation-params-twitter" class="creation-source-params">
+          <ul id="keyword-list">
+            <li id="keyword-input-li" class="search-field">
+              <input id="keyword-input" type="text" placeholder="关键词" data-dojo-attach-point="twitterKeywords">
+            </li>
+          </ul>
+          <span id="keyword-help">关键词以空格分开. </span>
+          <input type="text" placeholder="limit (testing)" data-dojo-attach-point="limit" style="display:none">
+        </div>
+        <div id="creation-params-wikipedia" class="creation-source-params" style="display:none">
+          <input type="checkbox" checked="checked" id="wiki-page-checkbox"><label id="wiki-page">Page Locations</label>
+          <input type="checkbox" checked="checked" id="wiki-user-checkbox"><label id="wiki-user">User Locations</label> 
+          <span id="keyword-help">Choose Wikipedia stream. </span>
+        </div>
+        <div id="creation-time-params">
+          <span class="creation-header">采集周期</span>
+          <div id="creation-from">
+            <span>起始时间</span>
+            <select><option class="selected">现在</option><option>30秒钟前</option><option>1分钟前</option><option>30分钟前</option><option>1小时前</option></select>  
+          </div>
+          <div id="creation-to">
+            <span>终止时间</span>
+            <select data-dojo-attach-point="endTime">
+              <option value="10 seconds">10秒钟</option>
+              <option value="1 minute">1分钟</option>
+              <option value="30 minutes" selected="">30分钟</option>
+              <option value="1 hour">1小时</option>
+              <option value="unlimited">持续</option>
+           </select>  
+          </div>
+          <div id="advanced-btn" data-dojo-attach-point="advancedBtn">高级设置 <i class="icon-cog"></i></div>
+          <div id="creation-custom-period" data-dojo-attach-point="customPeriod">
+            <span id="creation-custom-title">自定义采集周期<i class="icon-remove" data-dojo-attach-point="closeCustomPeriod"></i></span>
+            <div id="creation-custom-from">
+              <input type="text" placeholder="Jan 2, 2013"><i class="icon-calendar"></i>
+            </div>
+            <div id="creation-custom-to">
+              <input type="text" placeholder="May 10, 2013"><i class="icon-calendar"></i>
+            </div>
+          </div>
+        </div>
+        <div id="creation-save">
+          <input type="checkbox" id="creation-save-input" style="display:none"><span style="display:none">Save Collection</span>
+        </div>
+        <div id="creation-add-analysis" class="btn creation-next btn-left">分析</div>
+        <span class="creation-or">-- OR --</span>
+        <div id="creation-create" class="btn btn-primary btn-right create">开始收集</div>
+      </div>
+    </div>
+    <div id="creation-analysis" class="creation-step-content">
+      <div id="accordion"></div>
+      <span id="creation-add-viz" class="btn btn-left">可视化</span>
+      <span class="creation-or">-- OR --</span>
+      <span class="btn btn-primary btn-right create">开始收集</span>
+    </div>
+    <div id="creation-visualization" class="creation-step-content">
+      <div id="viz-wrapper">
+        <div id="style-single">
+          <ul class="nav nav-list">
+            <li class="nav-header">样式：</li>
+            <li class="color-tab color-fill active" title="填充色"><a href="#" title="填充色">填充色</a></li>
+            <li class="color-tab color-stroke" title="边框"><a href="#" title="边框">边框</a></li>
+          </ul>
+          <ul id="colorgrid" class="colorgrid"></ul>
+          <div id="icon-example-container">
+            <span>预览</span>
+            <div id="icon-example">
+            </div>
+          </div>
+          <div id="icon-size">
+            <span>大小</span>
+            <div class="btn-group">
+              <button class="btn" type="button" value="minus" data-dojo-attach-point="iconMinus"><i class="icon-minus"></i></button>
+              <button class="btn" type="button" value="plus" data-dojo-attach-point="iconPlus"><i class="icon-plus"></i></button>
+            </div>
+          </div>
+          <div id="icon-line-size">
+            <span>边框</span>
+            <div class="btn-group">
+              <button class="btn" type="button" data-dojo-attach-point="iconStrokeMinus"><i class="icon-minus"></i></button>
+              <button class="btn" type="button" data-dojo-attach-point="iconStrokePlus"><i class="icon-plus"></i></button>
+            </div>
+          </div>
+          <div id="icon-shape">
+            <span>形状</span>
+            <div class="btn-group" data-toggle="buttons-radio">
+              <button id="circlebtn" class="btn active" type="button" data-dojo-attach-point="iconCircle"></button>
+              <button id="squarebtn" class="btn" type="button" data-dojo-attach-point="iconSquare"></button>
+            </div>
+          </div>
+          <div id="point-opacity-slider">
+            <span>透明度</span>
+          </div>
+        </div>
+      </div>
+      <div id="style-agg">
+        <ul class="nav nav-list">
+          <li class="nav-header">样式：</li>
+          <li class="color-tab color-fill active" title="填充色"><a title="填充色" href="#">填充色</a></li>
+          <li class="color-tab color-stroke" title="边框"><a title="边框" href="#">边框</a></li>
+        </ul>
+        <ul id="aggcolorgrid" class="aggcolorgrid"></ul>
+        <div id="agg-breaks">
+          <span>级数</span>
+          <select id="agg-breaks-select"><option value="6" selected="selected">6级</option><option value="5">5级</option><option value="4">4级</option><option value="3">3级</option></select>
+        </div>
+        <div id="agg-type">
+          <span>分类</span>
+          <select id="classification-type-select"><option value="quantile" selected="">小数</option><option value="quantize">整数</option></select>
+        </div>
+        <div id="agg-line-size">
+          <span>边框</span>
+          <div class="btn-group">
+            <button class="btn" type="button" data-dojo-attach-point="aggStrokeMinus"><i class="icon-minus"></i></button>
+            <button class="btn" type="button" data-dojo-attach-point="aggStrokePlus"><i class="icon-plus"></i></button>
+          </div>
+        </div>
+        <div id="agg-example-container">
+          <span>预览</span>
+          <div id="agg-example">
+          </div>
+        </div>
+        <div id="agg-opacity-slider">
+          <span>透明度</span>
+        </div>
+      </div>
+      <span id="creation-review" class="btn btn-left">过滤</span>
+      <span class="creation-or">-- OR --</span>
+      <span class="btn btn-primary btn-right create">开始收集</span>
+    </div>
+    <div id="creation-alerts" class="creation-step-content">
+      <div id="alert-wrapper" class="creation-light">
+        <ul class="nav nav-list">
+          <li class="nav-header" style="line-height: 29px;">设置过滤条件</li>
+        </ul>
+        <div id="alert-eq-example"><span id="alert-current-calc">"平均"</span>
+          <span id="alert-current-attr">"属性"</span>
+          <span id="alert-current-opp">&gt;=</span>
+          <span id="alert-current-value">10</span>
+        </div>
+        <div class="btn-group">
+          <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="http://arcgis.github.io/social-js/templates/StreamCreation.html#">
+                     计算符
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu alert-calc-item">
+            <li title="Sum">求和</li>
+            <li title="Count">计数</li>
+            <li title="Min">最小</li>
+            <li title="Max">最大</li>
+            <li title="Average">平均</li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="http://arcgis.github.io/social-js/templates/StreamCreation.html#">
+                     属性
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu alert-attr-item">
+            <li title="Rate">比率</li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="http://arcgis.github.io/social-js/templates/StreamCreation.html#">
+            &gt;
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu alert-operator-item">
+            <li title="&gt;="> &gt;= </li>
+            <li title="&lt;="> &lt;= </li>
+            <li title="=="> == </li>
+            <li title="&gt;"> &gt; </li>
+            <li title="&lt;"> &lt; </li>
+          </ul>
+        </div>
+        <input id="alert-value" type="text" value="10">
+        <div id="alerts-recepients">
+          <span class="alert-blurb">
+                     手动输入过滤条件<br>
+            (邮件地址或电话 #)
+          </span>
+          <span class="btn btn-add" data-dojo-attach-point="addAlertRecepient">添加 <i class="icon-plus"></i></span>
+        </div>
+        <div class="btn btn-primary btn-right create">开始收集</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

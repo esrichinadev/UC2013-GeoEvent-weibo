@@ -1,0 +1,124 @@
+.brand {
+  color:#FEFEFE !important;
+}
+.navbar-inner {
+  background: url('../img/bannerBg.png') repeat;
+  min-height: 60px;
+}
+
+#main-header-controls.nav a {
+  color: #DBDBEA !important;
+}
+
+#main-header-controls.nav a:hover {
+  color: #FFFFFF !important;
+}
+
+#main-header-controls.nav .active>a {
+  background-color: #454C54 !important;
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#454c54),to(#1c3249)) !important;
+}
+
+input, textarea {
+  width: 241px;
+}
+.option-or {
+  font-size:13pt;
+  color:#CCC;
+  display:block;
+  position:absolute;
+  bottom:29px;
+  left:100px;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+#create-stream-form {
+  display:none;
+}
+#nav-buttons {
+  display:none;
+}
+#new_collection {
+  height:245px;
+}
+#filters-alerts-status {
+  width:242px;
+  font-size:9pt;
+  color:#444;
+  position:relative;
+}
+#is-alerts {
+  display:none;
+  position: absolute;
+  left: 176px;
+  border: 1px solid #EEE;
+  width: 74px;
+  text-align: center;
+  border-radius: 4px;
+}
+#is-geofence {
+  display:none;
+  position: absolute;
+  left: 0px;
+  width: 170px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  text-align: center;
+}
+#create_geofence {
+  display:none;
+}
+#add_alert {
+  display:none;
+}
+#draw-explained {
+  margin:10px; margin-left:0px; color:#444; display:none;
+}
+#alert-explained {
+  margin:5px; margin-left:0px; color:#444; display:none;
+}
+#set_alert_email {
+  position:absolute;
+  bottom:53px;
+  left:23px;
+}
+#option-rate {
+  font-weight:bold;
+}
+#option-time {
+  font-weight:bold;
+}
+#rate-num {
+  width: 30px;
+  text-align: right;
+}
+#rate-time-options {
+  position: absolute;
+  left: 90px;
+  top: 100px;
+}
+.rate-time-val {
+  padding:3px;
+  padding-left:5px;
+  padding-right:5px;
+  font-size:8pt;
+}
+.btn-left {
+  position:absolute;
+  bottom:25px;
+  left:22px;
+}
+.btn-right {
+  position:absolute;
+  bottom:25px;
+  right:23px;
+}
+.draw_type_btns {
+  width:225px; margin-top:4px
+}
+.alert {
+  color:#222222;
+  background:#FFFFFF;
+  border: 3px solid #444444;
+}

@@ -1,0 +1,57 @@
+/*
+ * CSS For Layers Palette
+ * 
+ */
+
+#layer-box-container {
+  height:100px;
+  width:100%;
+}
+
+.layers-box {
+  width: 215px;
+  height: 125px;
+  border: 3px solid #EEE;
+  float: left;
+  border-radius: 4px;
+  margin:2px;
+  background: url('../img/white_35.png') repeat;
+  position:relative;
+}
+
+.layers-box:hover {
+  cursor:pointer;
+  border:3px solid #FFF;
+}
+
+.layers-box-inner {
+  margin:5px;
+  text-align:center;
+}
+
+.layer-title {
+  color: #536275;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13pt;
+}
+
+.layer-keywords {
+  font-size:8pt;
+  margin-top:2px;
+}
+
+.layer-legend {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+}
+
+.layer-source {
+  position: absolute;
+  bottom: 9px;
+  right: 43px;
+  color: #888;
+}

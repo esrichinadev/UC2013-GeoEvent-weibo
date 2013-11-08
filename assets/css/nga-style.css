@@ -1,0 +1,114 @@
+/*
+ * APP UI
+ * 
+ */
+
+#map-controls {
+  position: absolute;
+  bottom: 5px;
+  height: 135px;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+}
+#map-controls .tab-content {
+  overflow:visible;
+}
+
+#map-controls ul {
+  height:28px;
+}
+#map-controls li a {
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:8px;
+}
+
+#timeline-tab {
+  padding-top:5px !important;
+  padding-bottom:3px !important;
+  margin-top:0px !important;
+}
+
+#map-controls .nav-tabs {
+  border-bottom:none;
+  margin-bottom:1px;
+}
+
+#map-controls .nav-tabs .active a {
+  background:#FEFEFE;
+  color:#536275;
+}
+
+#map-controls .nav-tabs a {
+  background:#536275;
+  color:#FEFEFE;
+}
+
+#static-infowindow {
+  position: absolute;
+  display: none;
+  width: 380px;
+  min-width: 240px;
+  height: auto;
+  overflow:hidden;
+  border-radius:3px;
+  border:2px solid #FFFFFF;
+  right: 10px;
+  top: 170px;
+  z-index: 100;
+  box-shadow: 1px 2px 10px 1px rgba(0,0,0,.4);
+  -moz-box-shadow: 1px 2px 10px 1px rgba(0,0,0,.4);
+  -webkit-box-shadow: 1px 2px 10px 1px rgba(0,0,0,.4);
+}
+#info-count {
+  font-weight:bold;
+  font-size:25pt;
+  color:#536275;
+  margin:10px;
+  display:block;
+  text-align:center;
+}
+
+#username {
+  display: block;
+  font-size: 18px;
+  text-align: left;
+  margin: 6px;
+}
+.single-tweet-text {
+  font-size: 17px;
+  display: block;
+  line-height: 35px;
+  text-align: left;
+  margin: 6px;
+  border-top: 1px solid #eee;
+}
+.single-tweet-time {
+  font-size:10px;
+  display:block:
+}
+
+
+.tweet-text {
+  font-size:26px;
+}
+.tweet-time {
+  font-size:10px;
+  
+}
+.tweet-val {
+  font-size:30px;
+}
+.tweet {
+  padding:5px;
+  border:1px solid #AAA;
+  border-radius:5px;
+  font-size:16px;
+  margin-top:5px;
+}
+
+.agg:hover {
+  cursor: pointer;
+  stroke: #0FF;
+}
